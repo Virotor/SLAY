@@ -33,15 +33,11 @@ namespace SLAY
             }
             ConvertStringToEquation convertStringToEquation = new ConvertStringToEquation();
             var s = convertStringToEquation.ConvertationEquation(textBox.Text);
-            var ss = s.CalculateAlphaAndBeta();
-          /*  foreach(var sss in ss)
-            {
-                textBox1.Text += String.Format("alpha {0:F2} beta {1:F2} \n", sss.Item1, sss.Item2);
-            }*/
             var sssss = s.CalculateValues();
+            int count = 1;
             foreach (var sssssss in sssss)
             {
-                textBox1.Text += String.Format("alpha {0:F2}  \n", sssssss);
+                textBox1.Text += String.Format("X{1} = {0:F2}  \n", sssssss, count++);
             }
         }
     }
